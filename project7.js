@@ -37,11 +37,9 @@ document.addEventListener("mousedown", function(e) {
 })
 
 document.addEventListener("mousemove", function(e) {
-  // what do you want to do when the user presses down
-  // on the mouse button?
+
 })
 
 document.addEventListener("mouseup", function(e) {
-  // what do you want to do when the user presses down
-  // on the mouse button?
+
 })
