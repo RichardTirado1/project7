@@ -32,10 +32,9 @@ function drawCircle(xpos, ypos, radius, color) {
 
 // Step 3: Event listeners
 document.addEventListener("mousemove", function(e) {
- var pt = transformPoint(e, document)
- var selectedShape
- var selectedColor
- var selectedSize
+ var pt = transformPoint(e)
+ var xpos = pt.x
+ var ypos = pt.y
 })
 
 document.addEventListener("mousedown", function(e) {
