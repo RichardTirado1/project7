@@ -31,12 +31,15 @@ function drawCircle(xpos, ypos, radius, color) {
 }
 
 // Step 3: Event listeners
-document.addEventListener("mousedown", function(e) {
-  // what do you want to do when the user presses down
-  // on the mouse button?
+document.addEventListener("mousemove", function(e) {
+ var pt = transformPoint(e, document)
+ var selectedShape
+ var selectedColor
+ var selectedSize
 })
 
-document.addEventListener("mousemove", function(e) {
+document.addEventListener("mousedown", function(e) {
+
 
 })
 
