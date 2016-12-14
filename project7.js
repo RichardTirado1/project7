@@ -1,6 +1,8 @@
 var screen = document.getElementById("screen")
 var namespace = "http://www.w3.org/2000/svg"
 
+var drawing = false
+
 // utility function
 function transformPoint(event) {
   var pt = screen.createSVGPoint()
@@ -32,6 +34,8 @@ function drawCircle(xpos, ypos, radius, color) {
 
 // Step 3: Event listeners
 document.addEventListener("mousemove", function(e) {
+  if  (drawing == true) {
+
  var pt = transformPoint(e)
  var xpos = pt.x
  var ypos = pt.y
@@ -45,14 +49,16 @@ document.addEventListener("mousemove", function(e) {
   else if (selectedShape == "circle") {
        drawCircle(pt.x, pt.y, selectedSize, selectedColor)
   }
-
+    }
  })
 
-document.addEventListener("mousedown", function(e) {
 
+
+document.addEventListener("mousedown", function(e) {
+   drawing = true
 
 })
 
 document.addEventListener("mouseup", function(e) {
-
+   drawing = false
 })
